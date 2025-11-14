@@ -1,10 +1,16 @@
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-neutral-100 flex flex-col items-center justify-center p-8">
@@ -24,53 +30,64 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Color Examples */}
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-neutral-800">نمونه دکمه‌ها:</h3>
+                <h3 className="text-lg font-semibold text-neutral-800">
+                  نمونه دکمه‌ها:
+                </h3>
                 <div className="space-y-3">
-                  <Button 
+                  <Button
                     onClick={() => setCount(count + 1)}
                     className="w-full bg-primary-500 hover:bg-primary-600 text-white"
                     size="lg"
                   >
                     Primary Button ({count})
                   </Button>
-                  
-                  <Button 
-                    className="w-full bg-success-500 hover:bg-success-600 text-white"
-                  >
+
+                  <Button className="w-full bg-success-500 hover:bg-success-600 text-white">
                     Success Button
                   </Button>
-                  
-                  <Button 
-                    className="w-full bg-cherry-red-500 hover:bg-cherry-red-600 text-white"
-                  >
-                    Cherry Red Button
+
+                  <Button className="w-full bg-peach-orange-500 hover:bg-peach-orange-600 text-white">
+                    Orange Button
                   </Button>
-                  
-                  <Button 
-                    className="w-full bg-shades-yellow-500 hover:bg-shades-yellow-600 text-white"
-                  >
-                    Yellow Button
+
+                  <Button className="w-full bg-error-500 hover:bg-error-600 text-white">
+                    Error Button
                   </Button>
                 </div>
               </div>
 
               {/* Color Badges */}
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-neutral-800">نمونه برچسب‌ها:</h3>
+                <h3 className="text-lg font-semibold text-neutral-800">
+                  نمونه برچسب‌ها:
+                </h3>
                 <div className="flex flex-wrap gap-2">
-                  <Badge className="bg-primary-100 text-primary-800 border-primary-200">Primary</Badge>
-                  <Badge className="bg-success-100 text-success-800 border-success-200">Success</Badge>
-                  <Badge className="bg-shades-yellow-100 text-shades-yellow-800 border-shades-yellow-200">Yellow</Badge>
-                  <Badge className="bg-cherry-red-100 text-cherry-red-800 border-cherry-red-200">Cherry Red</Badge>
-                  <Badge className="bg-error-100 text-error-800 border-error-200">Error</Badge>
-                  <Badge className="bg-neon-blue-100 text-neon-blue-800 border-neon-blue-200">Neon Blue</Badge>
+                  <Badge className="bg-primary-100 text-primary-800 border-primary-200">
+                    Primary
+                  </Badge>
+                  <Badge className="bg-success-100 text-success-800 border-success-200">
+                    Success
+                  </Badge>
+                  <Badge className="bg-neutral-cold-100 text-neutral-cold-800 border-neutral-cold-200">
+                    Neutral Cold
+                  </Badge>
+                  <Badge className="bg-peach-orange-100 text-peach-orange-800 border-peach-orange-200">
+                    Orange
+                  </Badge>
+                  <Badge className="bg-error-100 text-error-800 border-error-200">
+                    Error
+                  </Badge>
                 </div>
-                
+
                 <div className="mt-6 p-4 bg-neutral-100 rounded-lg border border-neutral-200">
-                  <h4 className="font-medium text-neutral-800 mb-2">نحوه استفاده:</h4>
+                  <h4 className="font-medium text-neutral-800 mb-2">
+                    نحوه استفاده:
+                  </h4>
                   <code className="text-sm text-neutral-600 bg-neutral-50 p-2 rounded block">
-                    className="bg-primary-500 text-white"<br/>
-                    className="bg-cherry-red-100 text-cherry-red-800"<br/>
+                    className="bg-primary-500 text-white"
+                    <br />
+                    className="bg-peach-orange-100 text-peach-orange-800"
+                    <br />
                     className="border-success-200"
                   </code>
                 </div>
@@ -82,31 +99,111 @@ function App() {
         {/* Complete Color Showcase */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {[
-            { name: 'Neutral Grays', colors: 'bg-neutral-500', light: 'bg-neutral-100' },
-            { name: 'Primary', colors: 'bg-primary-500', light: 'bg-primary-100' },
-            { name: 'Neutral Cold', colors: 'bg-neutral-cold-500', light: 'bg-neutral-cold-100' },
-            { name: 'Neutral Navy', colors: 'bg-neutral-navy-500', light: 'bg-neutral-navy-100' },
-            { name: 'Neon Blue', colors: 'bg-neon-blue-500', light: 'bg-neon-blue-100' },
-            { name: 'Sky Blue', colors: 'bg-sky-blue-500', light: 'bg-sky-blue-100' },
-            { name: 'Autumn Green', colors: 'bg-autumn-green-500', light: 'bg-autumn-green-100' },
-            { name: 'Shades Yellow', colors: 'bg-shades-yellow-500', light: 'bg-shades-yellow-100' },
-            { name: 'Peach Orange', colors: 'bg-peach-orange-500', light: 'bg-peach-orange-100' },
-            { name: 'Cherry Red', colors: 'bg-cherry-red-500', light: 'bg-cherry-red-100' },
-            { name: 'Error', colors: 'bg-error-500', light: 'bg-error-100' },
-            { name: 'Success', colors: 'bg-success-500', light: 'bg-success-100' },
+            {
+              name: "Primary",
+              c_1000: "bg-primary-1000",
+              c_900: "bg-primary-900",
+              c_800: "bg-primary-800",
+              c_700: "bg-primary-700",
+              c_600: "bg-primary-600",
+              c_500: "bg-primary-500",
+              c_400: "bg-primary-400",
+              c_300: "bg-primary-300",
+              c_200: "bg-primary-200",
+              c_100: "bg-primary-100",
+              c_50: "bg-primary-50",
+              c_25: "bg-primary-25",
+            },
+            {
+              name: "Neutral Cold",
+              c_1000: "bg-neutral-cold-1000",
+              c_900: "bg-neutral-cold-900",
+              c_800: "bg-neutral-cold-800",
+              c_700: "bg-neutral-cold-700",
+              c_600: "bg-neutral-cold-600",
+              c_500: "bg-neutral-cold-500",
+              c_400: "bg-neutral-cold-400",
+              c_300: "bg-neutral-cold-300",
+              c_200: "bg-neutral-cold-200",
+              c_100: "bg-neutral-cold-100",
+              c_50: "bg-neutral-cold-50",
+              c_25: "bg-neutral-cold-25",
+            },
+            {
+              name: "Success",
+              c_1000: "bg-success-1000",
+              c_900: "bg-success-900",
+              c_800: "bg-success-800",
+              c_700: "bg-success-700",
+              c_600: "bg-success-600",
+              c_500: "bg-success-500",
+              c_400: "bg-success-400",
+              c_300: "bg-success-300",
+              c_200: "bg-success-200",
+              c_100: "bg-success-100",
+              c_50: "bg-success-50",
+              c_25: "bg-success-25",
+            },
+            {
+              name: "Orange",
+              c_1000: "bg-peach-orange-1000",
+              c_900: "bg-peach-orange-900",
+              c_800: "bg-peach-orange-800",
+              c_700: "bg-peach-orange-700",
+              c_600: "bg-peach-orange-600",
+              c_500: "bg-peach-orange-500",
+              c_400: "bg-peach-orange-400",
+              c_300: "bg-peach-orange-300",
+              c_200: "bg-peach-orange-200",
+              c_100: "bg-peach-orange-100",
+              c_50: "bg-peach-orange-50",
+              c_25: "bg-peach-orange-25",
+            },
+            {
+              name: "Error",
+              c_1000: "bg-error-1000",
+              c_900: "bg-error-900",
+              c_800: "bg-error-800",
+              c_700: "bg-error-700",
+              c_600: "bg-error-600",
+              c_500: "bg-error-500",
+              c_400: "bg-error-400",
+              c_300: "bg-error-300",
+              c_200: "bg-error-200",
+              c_100: "bg-error-100",
+              c_50: "bg-error-50",
+              c_25: "bg-error-25",
+            },
+            
           ].map((color) => (
-            <Card key={color.name} className="overflow-hidden border-neutral-200">
-              <div className={`h-16 ${color.colors}`}></div>
-              <div className={`h-6 ${color.light}`}></div>
+            <Card
+              key={color.name}
+              className="overflow-hidden border-neutral-200"
+            >
+              <div className={`h-6 ${color.c_1000}`}></div>
+              <div className={`h-6 ${color.c_900}`}></div>
+              <div className={`h-6 ${color.c_800}`}></div>
+              <div className={`h-6 ${color.c_700}`}></div>
+              <div className={`h-6 ${color.c_600}`}></div>
+              <div className={`h-16 ${color.c_500}`}></div>
+              <div className={`h-6 ${color.c_400}`}></div>
+              <div className={`h-6 ${color.c_300}`}></div>
+              <div className={`h-6 ${color.c_200}`}></div>
+              <div className={`h-6 ${color.c_100}`}></div>
+              <div className={`h-6 ${color.c_50}`}></div>
+              <div className={`h-6 ${color.c_25}`}></div>
+
               <CardContent className="p-2">
-                <p className="text-xs font-medium text-neutral-700 text-center">{color.name}</p>
+                <p className="text-xs font-medium text-neutral-700 text-center">
+                  {color.name}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
