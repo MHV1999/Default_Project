@@ -69,7 +69,7 @@ const FontShowcase = () => {
               <p className="font-iran-sans text-lg">متن بزرگ - text-lg</p>
               <p className="font-iran-sans text-xl">متن خیلی بزرگ - text-xl</p>
               <p className="font-iran-sans text-2xl">متن عنوان - text-2xl</p>
-              <p className="font-iran-sans text-3xl font-bold">عنوان اصلی - text-3xl</p>
+              <p className="font-iran-sans text-3xl">عنوان اصلی - text-3xl</p>
             </div>
           </div>
 

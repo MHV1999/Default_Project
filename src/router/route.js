@@ -9,9 +9,9 @@ import Layout from "../layout";
 
 // lazy load صفحات برای code-splitting
 const Home = lazy(() => import("../pages/home"));
-const Login = lazy(() => import("../pages/login"));
-const ProductPage = lazy(() => import("../pages/productPage"));
-const StorePage = lazy(() => import("../pages/StorePage"));
+// const Login = lazy(() => import("../pages/login"));
+const Test = lazy(() => import("../pages/test/test"));
+// const StorePage = lazy(() => import("../pages/StorePage"));
 
 // مثال ساده از یک محافظ (auth guard)
 const RequireAuth = ({ children }) => {
@@ -20,6 +20,9 @@ const RequireAuth = ({ children }) => {
   if (!isAuthenticated) return <Navigate to="/login" replace />;
   return children;
 };
+
+console.log("RequireAuth = ", RequireAuth);
+
 
 // fallback کامپوننت موقع بارگذاری lazy
 const Loading = () => <div>در حال بارگذاری…</div>;
@@ -50,31 +53,31 @@ const PageRouter = () => {
           element: (
             <Suspense fallback={<Loading />}>
               {/* اگر بخواهید این صفحه محافظت‌شده باشد: element: <RequireAuth><StorePage/></RequireAuth> */}
-              <StorePage />
+              <Test />
             </Suspense>
           ),
         },
-        {
-          path: "product/:id",
-          element: (
-            <Suspense fallback={<Loading />}>
-              <ProductPage />
-            </Suspense>
-          ),
-          // اگر می‌خواهید هنگام رفتن به این مسیر دیتا از سرور بگیرید می‌توانید loader اضافه کنید
-          // loader: async ({ params }) => fetch(`/api/products/${params.id}`)
-        },
+        // {
+        //   path: "product/:id",
+        //   element: (
+        //     <Suspense fallback={<Loading />}>
+        //       <ProductPage />
+        //     </Suspense>
+        //   ),
+        //   // اگر می‌خواهید هنگام رفتن به این مسیر دیتا از سرور بگیرید می‌توانید loader اضافه کنید
+        //   // loader: async ({ params }) => fetch(`/api/products/${params.id}`)
+        // },
       ],
     },
     // صفحهٔ لاگین بیرون از لایهٔ اصلی (یا می‌تواند child هم باشد)
-    {
-      path: "/login",
-      element: (
-        <Suspense fallback={<Loading />}>
-          <Login />
-        </Suspense>
-      ),
-    },
+    // {
+    //   path: "/login",
+    //   element: (
+    //     <Suspense fallback={<Loading />}>
+    //       <Login />
+    //     </Suspense>
+    //   ),
+    // },
     // fallback برای مسیرهای نامشخص (اختیاری)
     {
       path: "*",
