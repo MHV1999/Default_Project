@@ -27,9 +27,21 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
-  			background: 'hsl(var(--primary-500))',
-  			foreground: 'hsl(var(--black))',
+  			background: 'hsl(var(--background))',
+  			foreground: 'hsl(var(--foreground))',
+  			card: 'hsl(var(--card))',
+  			'card-foreground': 'hsl(var(--card-foreground))',
+  			popover: 'hsl(var(--popover))',
+  			'popover-foreground': 'hsl(var(--popover-foreground))',
+  			muted: 'hsl(var(--muted))',
+  			'muted-foreground': 'hsl(var(--muted-foreground))',
+  			accent: 'hsl(var(--accent))',
+  			'accent-foreground': 'hsl(var(--accent-foreground))',
+  			destructive: 'hsl(var(--destructive))',
+  			'destructive-foreground': 'hsl(var(--destructive-foreground))',
   			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
   			black: 'hsl(var(--black))',
   			white: 'hsl(var(--white))',
   			'neutral-cold': {

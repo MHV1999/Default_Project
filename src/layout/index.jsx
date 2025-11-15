@@ -1,17 +1,15 @@
-// layout.jsx
-import { Sidebar } from "@/components/ui/sidebar";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Sidebar from "@/components/Sidebar";
+
 export default function Layout() {
   return (
-    <>
+    <div className="flex h-screen">
+      {/* Main Content */}
+        <main className="flex-1 overflow-auto">
+          <Outlet />
+        </main>
+      {/* Sidebar Component - Fixed */}
       <Sidebar />
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/store">Store</Link>
-      </nav>
-      <main>
-        <Outlet />
-      </main>
-    </>
+    </div>
   );
 }

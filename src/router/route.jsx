@@ -8,8 +8,7 @@ import {
 import Layout from "../layout";
 
 // lazy load صفحات برای code-splitting
-const Home = lazy(() => import("../pages/home"));
-// const Login = lazy(() => import("../pages/login"));
+const Home = lazy(() => import("../pages/home/home"));
 const Test = lazy(() => import("../pages/test/test"));
 // const StorePage = lazy(() => import("../pages/StorePage"));
 
@@ -25,14 +24,28 @@ console.log("RequireAuth = ", RequireAuth);
 
 
 // fallback کامپوننت موقع بارگذاری lazy
-const Loading = () => <div>در حال بارگذاری…</div>;
+const Loading = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500 mx-auto mb-2"></div>
+      <p className="text-neutral-600 font-iran-sans">در حال بارگذاری...</p>
+    </div>
+  </div>
+);
 
 const PageRouter = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout />, // Layout باید شامل <Outlet /> باشد تا children رندر شود
-      errorElement: <div>صفحه موردنظر پیدا نشد (404)</div>,
+      errorElement: (
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-neutral-900 font-iran-sans mb-2">404</h1>
+            <p className="text-neutral-600 font-iran-sans">صفحه موردنظر پیدا نشد</p>
+          </div>
+        </div>
+      ),
       children: [
         // Index route → مسیر پایه را به Home نگاشت می‌کند
         {
