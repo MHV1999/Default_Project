@@ -1,18 +1,23 @@
-# Video Player React
+# Default Project Template
 
-پروژه React با Tailwind CSS و shadcn/ui
+پروژه پایه React با Tailwind CSS، shadcn/ui و فونت فارسی
 
-## نصب شده
+## ویژگی‌های نصب شده
 
-✅ **Tailwind CSS v3.4** - برای styling  
-✅ **shadcn/ui** - کامپوننت‌های آماده  
+✅ **React 19.2.0 + Vite 7.2.2** - فریمورک و build tool  
+✅ **Tailwind CSS v3.4** - فریمورک CSS  
+✅ **shadcn/ui** - کامپوننت‌های آماده UI  
 ✅ **PostCSS & Autoprefixer** - پردازش CSS  
+✅ **فونت فارسی IRANSansXFaNum** - با 4 وزن مختلف  
+✅ **سیستم رنگی کامل** - 11 خانواده رنگ با CSS variables  
+✅ **پشتیبانی RTL** - راست به چپ برای فارسی  
 
-## کامپوننت‌های نصب شده
+## کامپوننت‌های آماده
 
-- `Button` - دکمه‌های مختلف
+- `Button` - دکمه‌های مختلف با استایل‌های متنوع
 - `Card` - کارت‌ها و پنل‌ها  
-- `Badge` - برچسب‌ها
+- `Badge` - برچسب‌ها و تگ‌ها
+- `FontShowcase` - نمایش فونت‌های مختلف
 
 ## اجرای پروژه
 
@@ -61,6 +66,33 @@ function MyComponent() {
 - `border-border` - حاشیه
 - `bg-card` - پس‌زمینه کارت
 
+## فونت‌های فارسی
+
+پروژه شامل فونت IRANSansXFaNum با 4 وزن مختلف:
+- Light (300) - نازک
+- Regular (400) - معمولی
+- Medium (500) - متوسط  
+- Bold (700) - ضخیم
+
+```jsx
+<div className="font-iran-sans font-bold">متن فارسی ضخیم</div>
+```
+
+## سیستم رنگی
+
+پروژه شامل 11 خانواده رنگ کامل با CSS variables:
+- `neutral` - خاکستری خنثی
+- `neutral-blue` - آبی خنثی
+- `true-blue` - آبی واقعی
+- `cherry-red` - قرمز گیلاسی
+- `success` - سبز موفقیت
+- و 6 رنگ دیگر...
+
 ## تم تیره/روشن
 
 پروژه از CSS variables استفاده می‌کنه که تم تیره و روشن رو پشتیبانی می‌کنه.
+
+## مستندات
+
+- `COLORS.md` - راهنمای کامل رنگ‌ها
+- `FONTS.md` - راهنمای کامل فونت‌ها
